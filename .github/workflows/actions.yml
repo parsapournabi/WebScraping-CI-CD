@@ -3,6 +3,10 @@ name: Python Application
 on:
   schedule:
     - cron: '* * * * *'  # This cron expression runs the workflow every minute
+  push:
+    branches:
+      - run-action
+      - master
 
 jobs:
   build:
