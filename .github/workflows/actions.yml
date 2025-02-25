@@ -28,3 +28,9 @@ jobs:
 
       - name: Run main.py
         run: python3 main.py
+
+      - name: Commit changes
+          uses: stefanzweifel/git-auto-commit-action@v4
+          with:
+            commit_message: Update README.md
+          id: auto-commit-action
