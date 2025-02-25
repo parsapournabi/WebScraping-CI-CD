@@ -29,8 +29,15 @@ jobs:
       - name: Run main.py
         run: python3 main.py
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Update README.md
-        id: auto-commit-action
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+          with:
+            server_address: smtp.gmail.com
+            server_port: 587
+            username: ${{secrets.MAIL_USERNAME}}
+            password: ${{secrets.MAIL_PASSWORD}}
+            subject: 'Datetime is: '
+            to: parsapournabi1382@gmail.com
+            from: NearNo
+            html_body: file://README.md
+            convert_markdown: true
