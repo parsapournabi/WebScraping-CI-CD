@@ -1,9 +1,11 @@
 name: Python Application
 
 on:
+  schedule:
+    - cron: '*/1 * * * *'  # This cron expression runs the workflow every minute
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -17,12 +19,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'  # Specify the Python version you want to use
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
+          python3 -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Run main.py
-        run: python main.py
+        run: python3 main.py
