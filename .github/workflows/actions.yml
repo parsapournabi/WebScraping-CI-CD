@@ -3,6 +3,9 @@ name: Python Application
 on:
   schedule:
     - cron: '*/5 * * * *'  # This cron expression runs the workflow every minute
+
+  workflow_dispatch:
+
   push:
     branches:
       - run-action
