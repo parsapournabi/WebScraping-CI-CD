@@ -2,7 +2,7 @@ name: Python Application
 
 on:
   schedule:
-    - cron: '* * * * *'  # This cron expression runs the workflow every minute
+    - cron: '*/5 * * * *'  # This cron expression runs the workflow every minute
   push:
     branches:
       - run-action
