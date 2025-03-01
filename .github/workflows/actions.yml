@@ -46,5 +46,5 @@ jobs:
           subject: 'قیمت روز سکه'
           to: parsapournabi1382@gmail.com
           from: Coins
-          html_body: file://output.csv
+          attachments: output.csv
           convert_markdown: true
