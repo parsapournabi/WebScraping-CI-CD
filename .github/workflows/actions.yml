@@ -43,8 +43,8 @@ jobs:
           server_port: 587
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: 'Datetime is: '
+          subject: 'قیمت روز سکه'
           to: parsapournabi1382@gmail.com
-          from: NearNo
-          html_body: file://README.md
+          from: Coins
+          html_body: file://output.csv
           convert_markdown: true
